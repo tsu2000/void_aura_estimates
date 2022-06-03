@@ -4,10 +4,10 @@ import matplotlib.pyplot as plt
 import numpy.random as rd
 import seaborn as sns
 
-st.title('Void Aura Estimates')
+st.title('Void Aura Estimator')
 st.markdown('### An AdventureQuest Worlds Guide')
 
-st.markdown("This dashboard shows the data visualisation for the expected number of days required to obtain **7480** Void Auras for the Necrotic Sword of Doom in AdventureQuest Worlds, using the quests **_'Retrieve Void Auras'_** or **_'Commanding Shadow Essences'_**, and based on the user's following inputs:")
+st.markdown("This dashboard shows the data visualisation for the expected number of days required to obtain **7480** Void Auras for the Necrotic Sword of Doom in AdventureQuest Worlds, using the quests **_'Retrieve Void Auras'_**, **_'Gathering Unstable Essences'_**, or **_'Commanding Shadow Essences'_**, and based on the user's following inputs:")
 st.markdown('- Current number of Void Auras')
 st.markdown('- Number of Quests to be completed per day')
 st.markdown("- Whether the Daily Quest **_'The Encroaching Shadows (Daily)'_** or **_'Glimpse Into The Dark (Daily)'_** is completed every day")
@@ -24,9 +24,9 @@ st.markdown('\n')
 current = st.number_input('Choose the amount of Void Auras you currently have:', min_value = 0, max_value = 7479, 
                     value = 500, step = 1)
 
-quests_per_day = st.number_input("Enter no. of times you aim to complete the quest 'Retrieve Void Auras' or 'Commanding Shadow Essences' per day:", min_value = 1, max_value = 800, value = 5, step = 1)
+quests_per_day = st.number_input("Enter the number of times you aim to complete the quest 'Retrieve Void Auras', 'Gathering Unstable Essences', or 'Commanding Shadow Essences' per day:", min_value = 1, max_value = 500, value = 5, step = 1)
 
-dq_options = ['The Encroaching Shadows (Daily) - [Non-Member]', 'Glimpse Into The Dark (Daily) - [Member Only]', 'None']
+dq_options = ['The Encroaching Shadows (Daily) - [Non-Member]', 'Glimpse Into The Dark (Daily) - [Member Only]', 'Both Daily Quests', 'None']
 
 dq_choice = st.selectbox('Which Daily Quest do you plan to do every day?', dq_options)
 
@@ -77,6 +77,10 @@ elif dq_choice == dq_options[1]:
     exp_days_boost = amt_farm / ((quests_per_day * x_boost) + 100)
 
 elif dq_choice == dq_options[2]:
+    exp_days_ord = amt_farm / ((quests_per_day *  x_ord) + 150)
+    exp_days_boost = amt_farm / ((quests_per_day * x_boost) + 150)
+
+elif dq_choice == dq_options[3]:
     exp_days_ord = amt_farm / (quests_per_day *  x_ord)
     exp_days_boost = amt_farm / (quests_per_day * x_boost)
     
