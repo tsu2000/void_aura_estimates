@@ -142,12 +142,12 @@ st.markdown('## Statistical Summary')
 st.markdown('#### Without Void Aura Boost')
 st.markdown('Expected Number of Days: **{}**'.format(int(np.ceil(xi))))
 st.markdown('Standard Deviation: **{}**'.format(round(np.std(exp_days_ord), 3)))
-st.markdown(f'Range of possible days to complete all quests: **[{round(np.min(exp_days_ord), 2)}, {round(np.max(exp_days_ord), 2}]**')
+st.markdown(f'Range of possible days to complete all quests: **[{round(np.min(exp_days_ord), 2)}, {round(np.max(exp_days_ord), 2)}]**')
 
 st.markdown('#### With Void Aura Boost')
 st.markdown('Expected Number of Days: **{}**'.format(int(np.ceil(xi2))))
 st.markdown('Standard Deviation: **{}**'.format(round(np.std(exp_days_boost), 3)))
-st.markdown(f'Range of possible days to complete all quests: **[{round(np.min(exp_days_boost), 2)}, {round(np.max(exp_days_boost), 2}]**')
+st.markdown(f'Range of possible days to complete all quests: **[{round(np.min(exp_days_boost), 2)}, {round(np.max(exp_days_boost), 2)}]**')
 
 dif = int(np.ceil(xi)) - int(np.ceil(xi2))
 
