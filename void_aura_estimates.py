@@ -5,7 +5,7 @@ import numpy.random as rd
 import seaborn as sns
 
 st.title('Void Aura Estimator')
-st.markdown('### An AdventureQuest Worlds Guide')
+st.markdown('## An AdventureQuest Worlds Guide')
 
 st.markdown("This dashboard shows the data visualisation for the expected number of days required to obtain **7480** Void Auras for the Necrotic Sword of Doom in AdventureQuest Worlds, using the quests **_'Retrieve Void Auras'_**, **_'Gathering Unstable Essences'_**, or **_'Commanding Shadow Essences'_**, and based on the user's following inputs:")
 st.markdown('- Current number of Void Auras')
@@ -14,7 +14,7 @@ st.markdown("- Whether the Daily Quest **_'The Encroaching Shadows (Daily)'_** o
 
 st.markdown("""---""")
 
-st.markdown('### User Inputs:')
+st.markdown('## User Inputs:')
 st.markdown('\n')
 
 
@@ -163,6 +163,6 @@ st.markdown('**What does the horizontal axis measure?**')
 st.markdown('- It measures the days it will take to obtain all the necessary resources. A graph with a wider range indicates that there is a greater possible range of days that it may take to obtain all the necessary resources.') 
            
 st.markdown('**How did you create this simulation?**')
-st.markdown('- I simulated the completion of the basic quest (which gave 5/6/7 Void Auras each time) 100 times and took the mean. Then I repeated this until I had a sample size of 1000, and then I found the average number of days for each of those 1000 instances before grouping the data into kernel density estimate **(KDE)** plots to visualise the distribution of observations in my dataset. I repeated this twice, once for normal drops and once during a Void Aura Boost.')
+st.markdown('- I simulated the completion of the basic quest (which gave 5/6/7 Void Auras each time) 100 times and took the mean. Then I repeated this until I had a sample size of 1000, and then I found the average number of days for each of those 1000 instances before grouping the data into kernel density estimate **(KDE)** plots to visualise the distribution of observations in my dataset. I repeated this twice, once for normal rates and once during a Void Aura Boost (5/10/20).')
                                                                                                      
 st.markdown("""---""")
