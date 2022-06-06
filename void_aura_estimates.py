@@ -162,7 +162,7 @@ st.markdown('- It measures the probability of obtaining all the necessary resour
 st.markdown('**What does the horizontal axis measure?**')
 st.markdown('- It measures the days it will take to obtain all the necessary resources. A graph with a wider range indicates that there is a greater possible range of days that it may take to obtain all the necessary resources.') 
            
-st.markdown('**How did you create this simulation?')
+st.markdown('**How did you create this simulation?**')
 st.markdown('- I simulated the completion of the basic quest (which gave 5/6/7 Void Auras each time) 100 times and took the mean. Then I repeated this until I had a sample size of 1000, and then I found the average number of days for each of those 1000 instances before grouping the data into kernel density estimate **(KDE)** plots to visualise the distribution of observations in my dataset. I repeated this twice, once for normal drops and once during a Void Aura Boost.')
                                                                                                      
 st.markdown("""---""")
