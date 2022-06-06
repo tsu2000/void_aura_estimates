@@ -142,17 +142,21 @@ st.markdown('## Statistical Summary')
 st.markdown('#### Without Void Aura Boost')
 st.markdown('Expected Number of Days: **{}**'.format(int(np.ceil(xi))))
 st.markdown('Standard Deviation: **{}**'.format(round(np.std(exp_days_ord), 3)))
-st.markdown(f'Range of possible days to complete all quests: [{np.min(exp_days_ord)}, {np.max(exp_days_ord)}]')
+st.markdown(f'Range of possible days to complete all quests: **[{round(np.min(exp_days_ord), 2)}, {round(np.max(exp_days_ord), 2}]**')
 
 st.markdown('#### With Void Aura Boost')
 st.markdown('Expected Number of Days: **{}**'.format(int(np.ceil(xi2))))
 st.markdown('Standard Deviation: **{}**'.format(round(np.std(exp_days_boost), 3)))
-st.markdown(f'Range of possible days to complete all quests: [{np.min(exp_days_boost)}, {np.max(exp_days_boost)}]')
+st.markdown(f'Range of possible days to complete all quests: **[{round(np.min(exp_days_boost), 2)}, {round(np.max(exp_days_boost), 2}]**')
 
 dif = int(np.ceil(xi)) - int(np.ceil(xi2))
 
 st.markdown('#### Time saved by obtaining Void Auras during a boost')
 st.markdown('Number of days saved: {}'.format(dif))
 st.markdown('Time spent farming reduced by **{}%**'.format(round(dif/int(np.ceil(xi))*100, 2)))
-
+                                                                                                     
+st.markdown('**Other Statistics:**')
+st.markdown('Magnitude of Simulation: Mean Auras of 100 quest-turn ins')
+st.markdown('Sample Size: 1000')
+                                                                                                     
 st.markdown("""---""")
