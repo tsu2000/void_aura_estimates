@@ -56,7 +56,7 @@ st.markdown('There are **{}** Void Auras left to obtain before reaching the targ
 
 
 
-# Simulation of a 1000 times to find the mean return of auras out of a sample size of n = 100 tries
+# Simulation of the mean number of auras among 100 quest turn-ins with a sample size of n = 1000
 
 x_ord = np.array([mean_aura(100, False) for i in range(0, 1000)])
 y_ord = np.ceil(amt_farm / x_ord)
@@ -84,7 +84,7 @@ elif dq_choice == dq_options[3]:
     exp_days_ord = amt_farm / (quests_per_day *  x_ord)
     exp_days_boost = amt_farm / (quests_per_day * x_boost)
     
-st.markdown('### Data Visualisation')
+st.markdown('## Data Visualisation')
 
 
 
@@ -138,13 +138,16 @@ st.pyplot(fig)
 
 # Statistical Summary
 st.markdown('## Statistical Summary')
+
 st.markdown('#### Without Void Aura Boost')
 st.markdown('Expected Number of Days: **{}**'.format(int(np.ceil(xi))))
 st.markdown('Standard Deviation: **{}**'.format(round(np.std(exp_days_ord), 3)))
+st.markdown(f'Range of possible days to complete all quests: [{np.min(exp_days_ord)}, {np.max(exp_days_ord)}]')
 
 st.markdown('#### With Void Aura Boost')
 st.markdown('Expected Number of Days: **{}**'.format(int(np.ceil(xi2))))
 st.markdown('Standard Deviation: **{}**'.format(round(np.std(exp_days_boost), 3)))
+st.markdown(f'Range of possible days to complete all quests: [{np.min(exp_days_boost)}, {np.max(exp_days_boost)}]')
 
 dif = int(np.ceil(xi)) - int(np.ceil(xi2))
 
