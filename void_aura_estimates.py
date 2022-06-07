@@ -12,6 +12,9 @@ st.markdown('- Current number of Void Auras')
 st.markdown('- Number of Quests to be completed per day')
 st.markdown("- Whether the Daily Quest **_'The Encroaching Shadows (Daily)'_** or **_'Glimpse Into The Dark (Daily)'_** is completed every day")
 
+st.components.v1.html("""<a href="https://github.com/tsu2000/void_aura_estimates" target="_blank"><img src="https://img.shields.io/static/v1?label=tsu2000&message=void_aura_estimates
+&color=blue&logo=github" alt="_blank"></a><a href="https://github.com/tsu2000/void_aura_estimates" target="_blank"><img src="https://img.shields.io/github/stars/tsu2000/void_aura_estimates?style=social" alt="tsu2000 - Genshin Impact 5-Star Chances"></a>""", height=28)
+
 st.markdown("""---""")
 
 st.markdown('## User Inputs:')
