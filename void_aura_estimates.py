@@ -33,6 +33,9 @@ dq_options = ['The Encroaching Shadows (Daily) - [Non-Member]', 'Glimpse Into Th
 
 dq_choice = st.selectbox('Which Daily Quest do you plan to do every day?', dq_options)
 
+plot_graph = st.button('View Plot')
+
+
 
 
 # Define a function to return the mean number of Void Auras from a sample of n, depending on whether there is a Void Aura boost
@@ -135,7 +138,8 @@ frame = legend.get_frame()
 frame.set_facecolor('lightcyan')
 frame.set_edgecolor('black')
 
-st.pyplot(fig)
+if plot_graph:
+  st.pyplot(fig)
 
 
 
