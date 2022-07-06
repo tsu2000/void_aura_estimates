@@ -7,7 +7,7 @@ import seaborn as sns
 st.title('Void Aura Estimator')
 st.markdown('## An AdventureQuest Worlds Guide')
 
-st.markdown("This dashboard shows the data visualisation for the expected number of days required to obtain **7480** Void Auras for the Necrotic Sword of Doom in AdventureQuest Worlds, using the quests **_'Retrieve Void Auras'_**, **_'Gathering Unstable Essences'_**, or **_'Commanding Shadow Essences'_**, and based on the user's following inputs:")
+st.markdown("This dashboard shows the data visualisation for the expected number of days required to obtain **7,500** Void Auras for the Necrotic Sword of Doom in AdventureQuest Worlds, using the quests **_'Retrieve Void Auras'_**, **_'Gathering Unstable Essences'_**, or **_'Commanding Shadow Essences'_**, and based on the user's following inputs:")
 st.markdown('- Current number of Void Auras')
 st.markdown('- Number of Quests to be completed per day')
 st.markdown("- Whether the Daily Quest **_'The Encroaching Shadows (Daily)'_** or **_'Glimpse Into The Dark (Daily)'_** is completed every day")
@@ -55,10 +55,10 @@ def mean_aura(n, boost_status):
 
     return np.mean(aura_list)
 
-amt_req = 7480
+amt_req = 7500
 amt_farm = amt_req - current
 
-st.markdown('There are **{}** Void Auras left to obtain before reaching the target of **7480** Void Auras.'.format(int(amt_farm)))
+st.markdown('There are **{}** Void Auras left to obtain before reaching the target of **7500** Void Auras.'.format(int(amt_farm)))
 
 
 
